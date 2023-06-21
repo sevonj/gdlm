@@ -1,0 +1,96 @@
+[gd_scene load_steps=3 format=3 uid="uid://dsp8n5iv4mcxq"]
+
+[ext_resource type="Script" path="res://ui/page_view/page_view.gd" id="1_c1mcd"]
+[ext_resource type="Texture2D" uid="uid://b6fuladncemir" path="res://ui/res/default_image.png" id="2_c7ojg"]
+
+[node name="page_view" type="VBoxContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_c1mcd")
+
+[node name="toolbar" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="input_back" type="Button" parent="toolbar"]
+layout_mode = 2
+focus_mode = 0
+text = "Back"
+flat = true
+
+[node name="post" type="PanelContainer" parent="."]
+layout_mode = 2
+
+[node name="vbox" type="VBoxContainer" parent="post"]
+layout_mode = 2
+
+[node name="cont_media" type="MarginContainer" parent="post/vbox"]
+layout_mode = 2
+
+[node name="post_img" type="TextureRect" parent="post/vbox/cont_media"]
+layout_mode = 2
+texture = ExtResource("2_c7ojg")
+expand_mode = 4
+stretch_mode = 5
+
+[node name="cont_title" type="HBoxContainer" parent="post/vbox"]
+layout_mode = 2
+
+[node name="title" type="Label" parent="post/vbox/cont_title"]
+layout_mode = 2
+text = "Lorem ipsum dolor sit amet"
+
+[node name="cont_body" type="VBoxContainer" parent="post/vbox"]
+layout_mode = 2
+
+[node name="body" type="Label" parent="post/vbox/cont_body"]
+layout_mode = 2
+text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed libero enim sed faucibus turpis. Est ultricies integer quis auctor elit. Consequat ac felis donec et odio. Pulvinar pellentesque habitant morbi tristique senectus et netus et malesuada. Purus in mollis nunc sed id semper risus in hendrerit. Faucibus scelerisque eleifend donec pretium vulputate sapien nec. Eu tincidunt tortor aliquam nulla. Lobortis feugiat vivamus at augue eget arcu dictum. Dis parturient montes nascetur ridiculus. Sagittis orci a scelerisque purus semper eget duis at tellus. Magna etiam tempor orci eu lobortis elementum nibh. Sit amet justo donec enim diam vulputate ut pharetra sit. Et leo duis ut diam quam nulla porttitor massa. Adipiscing elit pellentesque habitant morbi tristique senectus et netus. Malesuada fames ac turpis egestas sed tempus urna et pharetra."
+autowrap_mode = 2
+
+[node name="cont_meta" type="HFlowContainer" parent="post/vbox"]
+layout_mode = 2
+
+[node name="row1" type="HBoxContainer" parent="post/vbox/cont_meta"]
+layout_mode = 2
+
+[node name="post_author" type="Label" parent="post/vbox/cont_meta/row1"]
+layout_mode = 2
+text = "@user@example.com"
+
+[node name="dot1" type="Label" parent="post/vbox/cont_meta/row1"]
+layout_mode = 2
+text = "to"
+
+[node name="post_community" type="Label" parent="post/vbox/cont_meta/row1"]
+layout_mode = 2
+text = "community@example.com"
+
+[node name="row2" type="HBoxContainer" parent="post/vbox/cont_meta"]
+layout_mode = 2
+
+[node name="dot1" type="Label" parent="post/vbox/cont_meta/row2"]
+layout_mode = 2
+text = "•"
+
+[node name="time" type="Label" parent="post/vbox/cont_meta/row2"]
+layout_mode = 2
+text = "13h"
+
+[node name="dot2" type="Label" parent="post/vbox/cont_meta/row2"]
+layout_mode = 2
+text = "•"
+
+[node name="numcomments" type="Label" parent="post/vbox/cont_meta/row2"]
+layout_mode = 2
+text = "10 comments"
+
+[node name="cont_buttons" type="HBoxContainer" parent="post/vbox"]
+custom_minimum_size = Vector2(0, 32)
+layout_mode = 2
+
+[node name="comments" type="VBoxContainer" parent="."]
+layout_mode = 2
+theme_override_constants/separation = 0

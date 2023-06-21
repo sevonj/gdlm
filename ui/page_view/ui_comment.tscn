@@ -1,0 +1,41 @@
+[gd_scene load_steps=2 format=3 uid="uid://k6r6ifb3dfpk"]
+
+[ext_resource type="Script" path="res://ui/page_view/ui_comment.gd" id="1_3og0w"]
+
+[node name="ui_comment" type="VBoxContainer"]
+anchors_preset = -1
+anchor_right = 1.0
+offset_bottom = 113.0
+size_flags_horizontal = 3
+script = ExtResource("1_3og0w")
+
+[node name="cont_meta" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="author" type="Label" parent="cont_meta"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.372549, 0.372549, 0.372549, 1)
+text = "@user@example.com"
+
+[node name="dot1" type="Label" parent="cont_meta"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.372549, 0.372549, 0.372549, 1)
+text = "•"
+
+[node name="time" type="Label" parent="cont_meta"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.372549, 0.372549, 0.372549, 1)
+text = "13h"
+
+[node name="cont_body" type="VBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="body" type="Label" parent="cont_body"]
+layout_mode = 2
+text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed libero enim sed faucibus turpis. Est ultricies integer quis auctor elit. Consequat ac felis donec et odio. Pulvinar pellentesque habitant morbi tristique senectus et netus et malesuada."
+autowrap_mode = 2
+
+[node name="hr" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(0, 1)
+layout_mode = 2
+color = Color(0.188235, 0.188235, 0.188235, 1)

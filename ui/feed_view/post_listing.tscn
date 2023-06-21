@@ -1,0 +1,55 @@
+[gd_scene load_steps=4 format=3 uid="uid://k51d5m3f00yg"]
+
+[ext_resource type="StyleBox" uid="uid://donxmgg63384i" path="res://ui/res/stylebox_postcard.tres" id="1_3x5nb"]
+[ext_resource type="Script" path="res://ui/feed_view/post_listing.gd" id="2_8p56b"]
+[ext_resource type="Texture2D" uid="uid://b6fuladncemir" path="res://ui/res/default_image.png" id="3_5nicb"]
+
+[node name="post_listing" type="PanelContainer"]
+self_modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(0, 60)
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 136.0
+grow_horizontal = 2
+mouse_default_cursor_shape = 2
+theme_override_styles/panel = ExtResource("1_3x5nb")
+script = ExtResource("2_8p56b")
+
+[node name="hbox" type="HBoxContainer" parent="."]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="post_thumb" type="TextureRect" parent="hbox"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("3_5nicb")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="spacer" type="Control" parent="hbox"]
+custom_minimum_size = Vector2(16, 0)
+layout_mode = 2
+
+[node name="vbox" type="VBoxContainer" parent="hbox"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+
+[node name="post_title" type="Label" parent="hbox/vbox"]
+layout_mode = 2
+text = "..."
+autowrap_mode = 2
+
+[node name="spacer" type="Control" parent="hbox/vbox"]
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 2
+
+[node name="cont_meta" type="HBoxContainer" parent="hbox/vbox"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="post_meta" type="Label" parent="hbox/vbox/cont_meta"]
+layout_mode = 2
+text = "@user@example.com to community@example.com"

@@ -1,0 +1,7 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://brmbapynr1btq"]
+
+[ext_resource type="FontFile" uid="uid://prd85p5v7yug" path="res://ui/res/font/Winston-Medium.ttf" id="1_euwcn"]
+
+[resource]
+Label/font_sizes/font_size = 18
+Label/fonts/font = ExtResource("1_euwcn")

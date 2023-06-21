@@ -10,16 +10,18 @@ config_version=5
 
 [application]
 
-config/name="lemmy-reader"
-run/main_scene="res://main.tscn"
+config/name="GDLem"
+run/main_scene="res://ui/main.tscn"
 config/features=PackedStringArray("4.0", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [autoload]
 
 Globals="*res://autoload/globals.gd"
-Requester="*res://autoload/requester.gd"
-LemmyViewer="*res://autoload/lemmy_viewer.gd"
+DataHelper="*res://autoload/datahelper.gd"
+Requester="*res://old/requester.gd"
+ApiManager="*res://autoload/API/APIManager.gd"
+UI="*res://autoload/ui.gd"
 
 [rendering]
 

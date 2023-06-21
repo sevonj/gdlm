@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://bba4fnmcsyyfb"]
+
+[node name="ui_comment_threadline" type="HBoxContainer"]
+theme_override_constants/separation = 0
+
+[node name="spacer_l" type="Control" parent="."]
+custom_minimum_size = Vector2(15, 0)
+layout_mode = 2
+
+[node name="vr" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(1, 0)
+layout_mode = 2
+color = Color(0.188235, 0.188235, 0.188235, 1)
